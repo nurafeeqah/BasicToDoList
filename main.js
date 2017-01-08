@@ -1,4 +1,4 @@
-dy(function(e){
+$(document).ready(function(e){
     
 
     $("#addRow").click(function(e){
