@@ -4,7 +4,7 @@ $(document).ready(function(e){
     $("#addRow").click(function(e){
         var toDoItem = $("#toDoItem").val();
 
-        var newToDo = "<tr><td>" + toDoItem + "</td><td><input type='checkbox' toDoItem='newToDo'></td></tr>"
+        var newToDo = "<tr><td contenteditable='true'>" + toDoItem + "</td><td><input type='checkbox' toDoItem='newToDo'></td></tr>"
         $("table tbody").append(newToDo);
     });
 
