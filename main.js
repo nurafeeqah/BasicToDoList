@@ -1,12 +1,14 @@
 $(document).ready(function(e){
     
-
+    $( "#datepicker" ).datepicker();
+    // Adding new row when clicked Add button
     $("#addRow").click(function(e){
-        var toDoItem = $("#toDoItem").val();
-
-        var newToDo = "<tr><td contenteditable='true'>" + toDoItem + "</td><td><input type='checkbox' toDoItem='newToDo'></td></tr>"
-        $("table tbody").append(newToDo);
+            var toDoItem = $("#toDoItem").val();
+            var newToDo = "<tr></td><td contenteditable='true'>" + toDoItem + "</td><td><input type='checkbox' toDoItem='newToDo'></td></tr>"
+            $("table tbody").append(newToDo);
     });
+
+
 
     // Find and remove selected table rows
     $("#deleteRow").click(function(e){
@@ -20,7 +22,5 @@ $(document).ready(function(e){
     $('#clearAll').click(function(e){
         $('#toDoTable').find("tr:gt(0)").remove(); //gt selector
     });
-
-  
 
 });    

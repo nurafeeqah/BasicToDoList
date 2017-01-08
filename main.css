@@ -1,17 +1,11 @@
 form {
-    margin: 70px 0;
+    margin: 70px;
 }
 
 button {
 	width: 100%;
 }
 
-#listWrapper {
-	position: absolute;
-	bottom: 50px;
-	top: 160px;
-	right: 0;
-	left: 0;
-	overflow: scroll;
-}
+
+
 
