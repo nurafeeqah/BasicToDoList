@@ -1,14 +1,16 @@
 $(document).ready(function(e){
-    
-    $( "#datepicker" ).datepicker();
+
     // Adding new row when clicked Add button
     $("#addRow").click(function(e){
             var toDoItem = $("#toDoItem").val();
             var newToDo = "<tr></td><td contenteditable='true'>" + toDoItem + "</td><td><input type='checkbox' toDoItem='newToDo'></td></tr>"
-            $("table tbody").append(newToDo);
+            if (toDoItem     === '') {
+                alert("Form cannot be empty"); //Alert to not add an empty to-do item
+              } else {
+                $("table tbody").append(newToDo); 
+              }
+              document.getElementById("toDoItem").value = ""; //Clear the form once added to the list
     });
-
-
 
     // Find and remove selected table rows
     $("#deleteRow").click(function(e){
@@ -18,9 +20,12 @@ $(document).ready(function(e){
             }
         });
     });
+
     // Delete all table row except the first row 
     $('#clearAll').click(function(e){
         $('#toDoTable').find("tr:gt(0)").remove(); //gt selector
     });
+
+    $("table tbody").sortable(); 
 
 });    
