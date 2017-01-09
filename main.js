@@ -1,4 +1,8 @@
 $(document).ready(function(e){
+    
+    // $("#toDoItem").submit(function(e){
+    //     e.preventDefault();
+    // });
 
     // Adding new row when clicked Add button
     $("#addRow").click(function(e){
@@ -27,5 +31,7 @@ $(document).ready(function(e){
     });
 
     $("table tbody").sortable(); 
+
+    
 
 });    
