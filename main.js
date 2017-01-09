@@ -1,8 +1,8 @@
 $(document).ready(function(e){
     
-    // $("#toDoItem").submit(function(e){
-    //     e.preventDefault();
-    // });
+    $("#toDoItemForm").submit(function(e){
+        e.preventDefault();
+    });
 
     // Adding new row when clicked Add button
     $("#addRow").click(function(e){
